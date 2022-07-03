@@ -1,0 +1,41 @@
+{
+  "name": "jsharmony-db-mssql-native",
+  "version": "1.0.0",
+  "description": "jsHarmony Database Connector for SQL Server (MS Native Driver)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apHarmony/jsharmony-db-mssql-native"
+  },
+  "keywords": [
+    "jsHarmony",
+    "Database",
+    "Driver",
+    "SQL Server",
+    "Native",
+    "msnodesqlv8",
+    "Node v8",
+    "mssql"
+  ],
+  "author": "apHarmony <contact@apharmony.com> (http://www.apharmony.com/)",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/apHarmony/jsharmony-db-mssql-native/issues"
+  },
+  "homepage": "https://github.com/apHarmony/jsharmony-db-mssql-native",
+  "dependencies": {
+    "async": "^2.6.2",
+    "jsharmony-db": "^1.2.0",
+    "jsharmony-db-mssql": "^2.0.0",
+    "lodash": "^4.17.19",
+    "moment": "^2.24.0",
+    "msnodesqlv8": "^2.5.0",
+    "mssql": "^8.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.2.0"
+  }
+}
