@@ -19,11 +19,11 @@ along with this package.  If not, see <http://www.gnu.org/licenses/>.
 
 var JSHmssql = require('../index');
 var JSHdb = require('jsharmony-db');
-var indexTests = require('jsharmony-db-mssql/test/index.tests.js');
 var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
 var os = require('os');
+var assert = require('assert');
 
 var dbconfig = { };
 
@@ -36,4 +36,23 @@ if(fs.existsSync(path_TestDBConfig)){
 dbconfig = _.extend({_driver: new JSHmssql(), host: "server.domain.com", database: "DBNAME", options: { pooled: true }, pool: { max: 1 } },dbconfig);
 var db = new JSHdb(dbconfig);
 
-indexTests(db);
+describe('MSSQL Native Tests',function(){
+
+  it('Unexpected Error with Multiple statements', function (done) {
+    //Connect to database and get data
+    db.Command('',"select 1;select * from abc;",[],{},function(err,rslt){
+      assert(err,'Success');
+      return done();
+    });
+  });
+
+  
+  it('Unexpected Error with Print', function (done) {
+    //Connect to database and get data
+    db.Command('',"print '000';select * from abc;",[],{},function(err,rslt){
+      assert(err,'Success');
+      return done();
+    });
+  });
+
+});

@@ -1,6 +1,6 @@
 {
   "name": "jsharmony-db-mssql-native",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "jsHarmony Database Connector for SQL Server (MS Native Driver)",
   "main": "index.js",
   "scripts": {
